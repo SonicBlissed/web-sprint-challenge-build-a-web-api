@@ -3,31 +3,22 @@ const mappers = require('../../data/helpers/mappers');
 
 module.exports = {
   get,
+  getById,
   insert,
   update,
   remove,
 };
 
-function get(id) {
-  let query = db('actions');
-
-  if (id) {
-    return query
-      .where('id', id)
-      .first()
-      .then((action) => {
-        if (action) {
-          return mappers.actionToBody(action);
-        } else {
-          return null;
-        }
-      });
-  } else {
-    return query.then((actions) => {
-      return actions.map((action) => mappers.actionToBody(action));
-    });
-  }
+function get() {
+  return db('actions')
 }
+
+function getById(id) {
+  return db('actions')
+    .where({ id })
+    .first();
+}
+
 
 function insert(action) {
   return db('actions')
