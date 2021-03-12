@@ -139,7 +139,15 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. You might prepare by writing down your own answers before hand.
 
 1. The core features of Node.js and Express and why they are useful.
+<!-- Node allows bridges the server and client and allows them to share a language and code, uses only one thread instead of multiple, and can be utilized easily with npm.
+Express takes advantage of middleware, and is very clean and understandable.  -->
 1. Understand and explain the use of Middleware.
+<!-- Middleware is amazing because you can store otherwise redundant code into a variable and insert into your endpoint to do things like validate your request to the server, encrypt it, etc. -->
 1. The basic principles of the REST architectural style.
+<!-- It's stateless, uses json, easily scaled, and can be setup to deploy the api on one server while storing the data on another server. -->
 1. Understand and explain the use of Express Routers.
+<!-- Express routers are a way to direct the requests to the server and guide them through your api depending on the information requested.  -->
 1. Describe tooling used to manually test the correctness of an API.
+<!-- Nodemon enables testing without have to constantly reboot the server. It isn't used in production.
+Postman enables you to check your endpoints and make sure your CRUD functionality is working as intended
+HTTPie is an alternative to postman -->
