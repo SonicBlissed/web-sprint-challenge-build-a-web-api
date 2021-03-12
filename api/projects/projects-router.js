@@ -33,7 +33,8 @@ router.get('/:id', mw.validateProjectId, (req,res, next)=>{
 }) 
 
 router.get('/:id/actions', (req, res)=> {
-    Projects.getProjectActions(req.params)
+    const { id } = req.params
+    Projects.getProjectActions(id)
     .then(projectActions => {
         res.status(200).json(projectActions)
     })
